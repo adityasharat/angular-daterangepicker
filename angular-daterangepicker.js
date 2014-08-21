@@ -13,8 +13,8 @@
             var linker;
 
             linker = function ($scope, iElm, iAttrs) {
-                var start = $scope.start,
-                    end = $scope.end,
+                var start = $scope.start || moment(),
+                    end = $scope.end || moment(),
                     ranges = $scope.ranges || defaultRanges,
                     format = iAttrs.format || 'YYYY-MM-DD',
                     opens = iAttrs.opens || 'right',
@@ -27,8 +27,8 @@
                 iElm.daterangepicker({
                     format: format,
                     ranges: ranges,
-                    startDate: start || moment(),
-                    endDate: end || moment(),
+                    startDate: start,
+                    endDate: end,
                     opens: opens,
                     applyClass: 'btn',
                     cancelClass: cancelClass,
