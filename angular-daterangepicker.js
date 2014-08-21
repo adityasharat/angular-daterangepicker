@@ -28,7 +28,7 @@
                     opens = iAttrs.opens || 'right',
                     parentId = iAttrs.parentId || 'body',
                     classes = iAttrs.class || 'btn',
-                    cancelClass,
+                    cancelClass = iAttrs.cancelClass || null,
                     defaultRanges,
                     options;
 
