@@ -10,7 +10,15 @@
     AngularDateRange.directive('dateRangePicker', [
 
         function () {
-            var linker;
+            var linker,
+                scope;
+
+            scope = {
+                start: '=',
+                end: '=',
+                ranges: '=',
+                onApply: '='
+            };
 
             linker = function ($scope, iElm, iAttrs) {
                 var start = $scope.start || moment(),
@@ -47,12 +55,7 @@
 
             return {
                 name: 'dateRangePicker',
-                scope: {
-                    start: '=',
-                    end: '=',
-                    ranges: '=',
-                    onApply: '='
-                },
+                scope: scope,
                 restrict: 'A',
                 link: linker
             };
