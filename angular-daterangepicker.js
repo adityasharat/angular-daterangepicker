@@ -15,14 +15,12 @@
             linker = function ($scope, iElm, iAttrs) {
                 var start = $scope.start || moment(),
                     end = $scope.end || moment(),
-                    ranges = $scope.ranges || defaultRanges,
+                    ranges = $scope.ranges || {},
                     format = iAttrs.format || 'YYYY-MM-DD',
                     opens = iAttrs.opens || 'right',
                     parentId = iAttrs.parentId || 'body',
                     cancelClass,
                     defaultRanges;
-
-                defaultRanges = {};
 
                 iElm.daterangepicker({
                     format: format,
