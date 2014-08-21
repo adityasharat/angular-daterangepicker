@@ -29,7 +29,6 @@
                     parentId = iAttrs.parentId || 'body',
                     classes = iAttrs.class || 'btn',
                     cancelClass = iAttrs.cancelClass || null,
-                    defaultRanges,
                     options;
 
                 options = {
