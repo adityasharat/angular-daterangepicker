@@ -24,12 +24,6 @@
 
                 defaultRanges = {};
 
-                if (iAttrs.cancel === 'true') {
-                    cancelClass = 'cancelBtn btn btn-small btn-default';
-                } else {
-                    cancelClass = 'ng-hide';
-                }
-
                 iElm.daterangepicker({
                     format: format || 'YYYY-MM-DD',
                     ranges: ranges || defaultRanges,
