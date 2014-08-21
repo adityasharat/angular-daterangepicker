@@ -29,9 +29,10 @@
                     parentId = iAttrs.parentId || 'body',
                     classes = iAttrs.class || 'btn',
                     cancelClass,
-                    defaultRanges;
+                    defaultRanges,
+                    options;
 
-                iElm.daterangepicker({
+                options = {
                     format: format,
                     ranges: ranges,
                     startDate: start,
@@ -40,7 +41,9 @@
                     applyClass: classes,
                     cancelClass: cancelClass,
                     parentEl: parentId
-                }, function (start, end) {
+                };
+
+                iElm.daterangepicker(options, function (start, end) {
                     $scope.$apply(function () {
                         $scope.start = start;
                         $scope.end = end;
