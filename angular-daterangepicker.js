@@ -27,6 +27,7 @@
                     format = iAttrs.format || 'YYYY-MM-DD',
                     opens = iAttrs.opens || 'right',
                     parentId = iAttrs.parentId || 'body',
+                    classes = iAttrs.class || 'btn',
                     cancelClass,
                     defaultRanges;
 
@@ -36,7 +37,7 @@
                     startDate: start,
                     endDate: end,
                     opens: opens,
-                    applyClass: 'btn',
+                    applyClass: classes,
                     cancelClass: cancelClass,
                     parentEl: parentId
                 }, function (start, end) {
