@@ -30,7 +30,7 @@
                     startDate: start || moment(),
                     endDate: end || moment(),
                     opens: opens,
-                    applyClass: 'btn secondary_action_button',
+                    applyClass: 'btn',
                     cancelClass: cancelClass,
                     parentEl: parentId
                 }, function (start, end) {
